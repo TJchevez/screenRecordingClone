@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Thanya-Chevez-s-workspace-vptvfv.us-east-1.xata.sh/db/jsm_snapcast",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
