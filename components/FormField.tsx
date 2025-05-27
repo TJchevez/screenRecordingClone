@@ -32,7 +32,6 @@ const FormField = ({ id, label, type = "text", value, onChange, placeholder, as 
             placeholder={placeholder}
         />
     )}
-}
         </div>
     )
 }
