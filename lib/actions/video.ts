@@ -155,7 +155,7 @@ export const getAllVideos = withErrorHandling(async (
         .where(whereCondition)
 
     const totalVideos = Number(totalCount || 0);
-    const totalPages = Math.ceil(totalVideos/pageSize);
+    const totalPages = Math.ceil(totalVideos / pageSize);
 
     const videoRecords = await buildVideoWithUserQuery()
         .where(whereCondition)
