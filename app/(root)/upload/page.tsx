@@ -83,6 +83,7 @@ const Page = () => {
 
             // Attach thumbnail
             await uploadFileToBunny(thumbnail.file, thumbnailUploadUrl, thumbnailAccessKey);
+
             // Create a new DB Entry for the video details (urls, data)
             await saveVideoDetails({
                 videoId,

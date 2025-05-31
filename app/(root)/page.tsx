@@ -3,7 +3,7 @@ import VideoCard from "@/components/VideoCard";
 import {getAllVideos} from "@/lib/actions/video";
 import EmptyState from "@/components/EmptyState";
 
-const Page = async ({ searchParams }: SearchParams) => {
+const Page = async ({ searchParams}: SearchParams) => {
     const { query, filter, page } = await searchParams;
 
     const { videos, pagination } = await getAllVideos(query, filter, Number(page) || 1);

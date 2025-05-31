@@ -88,9 +88,9 @@ export const getVideoUploadUrl = withErrorHandling(async () => {
 });
 
 export const getThumbnailUploadUrl = withErrorHandling(async (videoId: string) => {
-    const fileName = `${Date.now()}-${videoId}-thumbnail}`;
+    const fileName = `${Date.now()}-${videoId}-thumbnail`;
     const uploadUrl = `${THUMBNAIL_STORAGE_BASE_URL}/thumbanails/${fileName}`;
-    const cdnUrl = `${THUMBNAIL_CDN_URL}/thumbnails/${fileName}`;
+    const cdnUrl = `${THUMBNAIL_CDN_URL}/thumbnails/${fileName}`; // ✅ no stray }
 
     return {
         uploadUrl,
@@ -155,7 +155,7 @@ export const getAllVideos = withErrorHandling(async (
         .where(whereCondition)
 
     const totalVideos = Number(totalCount || 0);
-    const totalPages = Math.ceil(totalVideos / pageSize);
+    const totalPages = Math.ceil(totalVideos/pageSize);
 
     const videoRecords = await buildVideoWithUserQuery()
         .where(whereCondition)
@@ -175,4 +175,11 @@ export const getAllVideos = withErrorHandling(async (
             pageSize
         }
     }
+})
+
+export const getVideoById = withErrorHandling(async (videoId: string) => {
+    const [videoRecord] = await buildVideoWithUserQuery()
+        .where(eq(videos.id, videoId))
+
+    return videoRecord;
 })
