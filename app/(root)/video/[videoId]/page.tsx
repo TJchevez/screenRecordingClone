@@ -1,6 +1,7 @@
 import {getVideoById} from "@/lib/actions/video";
 import {redirect} from "next/navigation";
 import VideoPlayer from "@/components/VideoPlayer";
+import VideoDetailHeader from "@/components/VideoDetailHeader";
 
 const Page = async ({ params }: Params) => {
     const { videoId } = await params;
@@ -11,8 +12,7 @@ const Page = async ({ params }: Params) => {
 
     return (
         <main className="wrapper page">
-            <h1 className="text-2xl">{video.title}</h1>
-            <h1 className="text-2xl">{video.videoId}</h1>
+            <VideoDetailHeader {...video} userImg={user?.image} username={user?.name} ownerId={user?.id} />
 
             <section className="video-details">
                 <div className="content">

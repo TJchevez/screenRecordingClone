@@ -90,7 +90,7 @@ export const getVideoUploadUrl = withErrorHandling(async () => {
 export const getThumbnailUploadUrl = withErrorHandling(async (videoId: string) => {
     const fileName = `${Date.now()}-${videoId}-thumbnail`;
     const uploadUrl = `${THUMBNAIL_STORAGE_BASE_URL}/thumbanails/${fileName}`;
-    const cdnUrl = `${THUMBNAIL_CDN_URL}/thumbnails/${fileName}`; // ✅ no stray }
+    const cdnUrl = `${THUMBNAIL_CDN_URL}/thumbnails/${fileName}`;
 
     return {
         uploadUrl,
