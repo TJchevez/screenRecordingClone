@@ -7,6 +7,8 @@ import {
     saveVideoDetails,
 } from "@/lib/actions/video";
 import { useRouter } from "next/navigation";
+import FileInput from "@/components/FileInput";
+import FormField from "@/components/FormField";
 import { useFileInput } from "@/lib/hooks/useFileInput";
 import { MAX_THUMBNAIL_SIZE, MAX_VIDEO_SIZE } from "@/constants";
 
@@ -27,7 +29,7 @@ const uploadFileToBunny = (
             throw new Error(`Upload failed with status ${response.status}`);
     });
 
-const Page = () => {
+const UploadPage = () => {
     const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -138,7 +140,7 @@ const Page = () => {
                 duration: videoDuration,
             });
 
-            router.push(`/video/${videoId}`);
+            router.push(`/`);
         } catch (error) {
             console.error("Error submitting form:", error);
         } finally {
@@ -215,4 +217,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default UploadPage;
