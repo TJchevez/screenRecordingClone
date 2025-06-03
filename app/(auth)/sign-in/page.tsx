@@ -47,7 +47,7 @@ const Page = () => {
                                width={40} height={40}/>
                         <h1>SnapCast</h1>
                     </Link>
-                    <p>Create and Share your very first <span>SnapCast video</span>in no time!</p>
+                    <p>Create and Share your very first <span>SnapCast video</span> in no time!</p>
                     <button onClick={handleSignIn}>
                         <Image src="/assets/icons/google.svg" alt="google" width={22} height={22}/>
                         <span>Sign in with Google</span>
