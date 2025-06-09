@@ -29,7 +29,7 @@ const page = async ({ searchParams }: SearchParams) => {
                             userImg={user?.image ?? ""}
                             username={user?.name ?? "Guest"}
                             views={video.views}
-                            visibility={video.visibility}
+
                             duration={video.duration}
                         />
                     ))}
