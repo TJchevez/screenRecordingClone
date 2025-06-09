@@ -37,7 +37,7 @@ const page = async ({ searchParams }: SearchParams) => {
             ) : (
                 <EmptyState
                     icon="/assets/icons/video.svg"
-                    title="No Videos Found"
+                    title="No Videos Found."
                     description="Try adjusting your search."
                 />
             )}
