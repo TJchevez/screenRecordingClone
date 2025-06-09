@@ -31,7 +31,7 @@ const Page = () => {
                                    width={64} height={64} className="rounded-full"/>
                             <div>
                                 <h2>
-                                    Jason Rivera
+                                    Jason Riveraa
                                 </h2>
                                 <p>Product Designer, NovaByte</p>
                             </div>
