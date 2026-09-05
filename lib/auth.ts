@@ -23,6 +23,6 @@ export const auth = betterAuth({
 
     trustedOrigins: [
         "https://screen-recording-clone-gw6f.vercel.app",
-        "https://screen-recording-clone-gw6f-j5st5qws8-tjchevezs-projects.vercel.app",
+        "https://screen-recording-clone-gw6f-*.vercel.app",
     ],
 });
