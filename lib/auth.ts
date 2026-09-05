@@ -19,10 +19,12 @@ export const auth = betterAuth({
 
     plugins: [nextCookies()],
 
-    baseURL: process.env.BETTER_AUTH_URL!,
-
-    trustedOrigins: [
-        "https://screen-recording-clone-gw6f.vercel.app",
-        "https://screen-recording-clone-gw6f-*.vercel.app",
-    ],
+    baseURL: {
+        allowedHosts: [
+            "screen-recording-clone-gw6f.vercel.app",
+            "screen-recording-clone-gw6f-*.vercel.app",
+        ],
+        protocol: "https",
+        fallback: "https://screen-recording-clone-gw6f.vercel.app",
+    },
 });
