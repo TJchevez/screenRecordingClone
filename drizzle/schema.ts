@@ -64,5 +64,5 @@ export const videos = pgTable("videos", {
 });
 
 export const schema = {
-    user, account, session, verification
+    user, account, session, verification, videos,
 }
