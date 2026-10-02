@@ -2,9 +2,9 @@ export const MAX_VIDEO_SIZE = 500 * 1024 * 1024;
 export const MAX_THUMBNAIL_SIZE = 10 * 1024 * 1024;
 
 export const BUNNY = {
-  STORAGE_BASE_URL: "https://storage.bunnycdn.com/tjc-snapcast",
-  CDN_URL: "https://tjc-snap-cast.b-cdn.net",
-  TRANSCRIPT_URL: "https://vz-9c9390b1-382.b-cdn.net",
+  STORAGE_BASE_URL: "https://storage.bunnycdn.com/tpoe-snapcaststorage",
+  CDN_URL: "https://tpoe-snapcast.b-cdn.net",
+  TRANSCRIPT_URL: "https://vz-5a83536a-56f.b-cdn.net",
   EMBED_URL: "https://iframe.mediadelivery.net/embed",
   STREAM_BASE_URL: "https://video.bunnycdn.com/library",
 };
