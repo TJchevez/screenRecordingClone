@@ -114,8 +114,8 @@ export const saveVideoDetails = withErrorHandling(
             ...videoDetails,
             videoUrl: `${BUNNY.EMBED_URL}/${BUNNY_LIBRARY_ID}/${videoDetails.videoId}`,
             userId,
-            createdAt: now,
-            updatedAt: now,
+            createdAt: new Date(),
+            updatedAt: new Date(),
         });
 
         revalidatePaths(["/"]);

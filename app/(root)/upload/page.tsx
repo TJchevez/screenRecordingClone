@@ -140,7 +140,7 @@ const UploadPage = () => {
                 duration: videoDuration,
             });
 
-            router.push(`/`);
+            router.push(`/video/${videoId}`);
         } catch (error) {
             console.error("Error submitting form:", error);
         } finally {
